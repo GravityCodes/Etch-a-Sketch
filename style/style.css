@@ -25,10 +25,27 @@ main {
     
 }
 
-.user-form {
+#user-utilities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #34A0A4;
     padding: 10px;
+    color: #D9ED92;
 }
+
+button {
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid #D9ED92;
+    padding: 10px 20px;
+    color: #D9ED92;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 
 .container {
     width: 800px;
@@ -37,6 +54,31 @@ main {
     flex-wrap: wrap;
     align-content: flex-start;
     border: 10px solid #34A0A4;
-    background-color: white;
+    background-color: rgb(112, 111, 111);
 }
 
+input {
+    
+    
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    background-color: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 10px;
+    background: #D9ED92;
+    border: 1px solid #184E77;
+    border-radius: 25px;
+} 
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 25px;
+    margin-top: -8px;
+    background:#184E77;
+}
