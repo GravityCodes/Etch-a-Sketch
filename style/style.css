@@ -18,11 +18,24 @@ header {
     color: #D9ED92;
 }
 
+main {
+    display: flex;
+    gap: 25px;
+
+    
+}
+
+.user-form {
+    background-color: #34A0A4;
+    padding: 10px;
+}
+
 .container {
     width: 800px;
     height: 800px;
     display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
     border: 10px solid #34A0A4;
     background-color: white;
 }
