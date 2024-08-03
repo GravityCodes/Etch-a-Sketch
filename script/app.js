@@ -4,6 +4,7 @@ const gridBlockAmountSubmit = document.querySelector("#grid-block-amount-submit"
 const gridBlockAmount = document.querySelector("#grid-block-amount");
 let allGridBlocks = document.querySelectorAll(".gridBlock");
 const reset = document.querySelector("#reset");
+const color = document.querySelector("#grid-block-colors");
 
 let createGrid = (num) => {
     amount = num ** 2
@@ -28,7 +29,7 @@ let createGrid = (num) => {
     // User Drawing Logic
     allGridBlocks.forEach((grid) => {
         const blockColor = () => {
-        grid.style = `aspect-ratio: 1/1; width: ${800 / num}px ;  min-width= 8px; border-color: transparent; background-color: black; user-select: none;`;
+        grid.style = `aspect-ratio: 1/1; width: ${800 / num}px ;  min-width= 8px; border-color: transparent; background-color: ${color.value}; user-select: none;`;
     };
     
     grid.addEventListener('mousedown', blockColor);
@@ -49,7 +50,7 @@ let createGrid = (num) => {
 createGrid(16)
 
 // Keeps track of the current grid being used for resetting purposes.
-let currentGridAmount;
+let currentGridAmount = 16;
 
 gridBlockAmountSubmit.addEventListener("click", () => {
     createGrid(gridBlockAmount.value);
